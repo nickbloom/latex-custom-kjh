@@ -26,9 +26,9 @@
 % Make the style for Chapters and sections
    \makechapterstyle{memo-comments}{
      \renewcommand\thesection{\arabic{section}} 
-     \setsecheadstyle{\Large\sffamily} 
-     \setsubsecheadstyle{\large\sffamily} 
-     \setsubsubsecheadstyle{\normalsize\sffamily\itshape} 
+     \setsecheadstyle{\Large\bfseries} 
+     \setsubsecheadstyle{\large\scshape} 
+     \setsubsubsecheadstyle{\normalsize\itshape} 
     \renewcommand{\printchaptername}{} 
     \renewcommand{\chapternamenum}{} 
     \renewcommand{\chapnumfont}{\chaptitlefont} 
@@ -36,8 +36,8 @@
     \renewcommand{\afterchapternum}{} 
     \renewcommand{\printchaptername}{\secheadstyle}
     \renewcommand{\cftchapterfont}{\normalfont} 
-    \renewcommand{\cftchapterpagefont}{\normalfont\sffamily} 
-    \renewcommand{\cftchapterpresnum}{\sffamily} 
+    \renewcommand{\cftchapterpagefont}{\normalfont} 
+    \renewcommand{\cftchapterpresnum}{} 
     %\renewcommand{\cftchapterleader}{} 
     %\renewcommand{\cftchapterafterpnum}{\cftparfillskip}
     \captiontitlefont{\small}
@@ -49,12 +49,12 @@
     \setaftersecskip{1.7ex}
     
     % Title 
-    \pretitle{\begin{flushleft}\LARGE\sffamily\bfseries}
+    \pretitle{\begin{flushleft}\LARGE\bfseries}
     \posttitle{\end{flushleft}\par\vskip 0.5em}
-    \preauthor{\begin{flushleft}\Large\sffamily}
+    \preauthor{\begin{flushleft}\normalsize}
     \postauthor{\end{flushleft}}
-    \predate{\begin{flushleft}\sffamily\footnotesize\vspace{0.9em}}
-    \postdate{\end{flushleft}\par\vskip 2em}
+    \predate{\begin{flushleft}\footnotesize}
+    \postdate{\end{flushleft}\par}
    }
 
 %%% --------------------------------------------------
@@ -103,7 +103,7 @@
    \makechapterstyle{article-2}{
     \setsecheadstyle{\Large\sffamily} 
     \setsubsecheadstyle{\normalsize\sffamily\itshape} 
-	\setaftersubsubsecskip{-1em}
+    \setaftersubsubsecskip{-1em}
     \setsubsubsecheadstyle{\small\bfseries}
     \renewcommand{\printchaptername}{} 
     \renewcommand{\chapternamenum}{} 
@@ -205,10 +205,9 @@
 
 %% Make the style for Chapters and sections
    \makechapterstyle{article-4}{
-    \setsecheadstyle{\Large\scshape\MakeLowercase} 
-    \setsubsecheadstyle{\normalsize\itshape} 
-	\setaftersubsubsecskip{-1em}
-    \setsubsubsecheadstyle{\small\bfseries}
+   \setsecheadstyle{\Large\scshape} 
+    \setsubsecheadstyle{\large\bfseries} 
+    \setsubsubsecheadstyle{\large\itshape}
     \renewcommand{\printchaptername}{} 
     \renewcommand{\chapternamenum}{} 
     \renewcommand{\chapnumfont}{\chaptitlefont} 
@@ -241,7 +240,7 @@
     \postdate{\end{flushleft}}
 
     % 'abstract' bigger skip from title
-    \addto\captionsamerican{\renewcommand{\abstractname}{}}
+    \addto\captionsamerican{\renewcommand{\abstractname}{Abstract: }}
     \renewcommand{\abstractname}{}
     \renewcommand{\abstracttextfont}{\normalfont\scriptsize}
     \abstractrunin
@@ -254,10 +253,9 @@
 
 %% Make the style for Chapters and sections
    \makechapterstyle{article-4-sans}{
-    \setsecheadstyle{\sffamily\bfseries} 
-    \setsubsecheadstyle{\normalsize\sffamily\itshape} 
-	\setaftersubsubsecskip{-1em}
-    \setsubsubsecheadstyle{\small}
+     \setsecheadstyle{\sffamily\bfseries\Large} 
+    \setsubsecheadstyle{\sffamily\itshape\large} 
+    \setsubsubsecheadstyle{\sffamily\small}
     \renewcommand{\printchaptername}{} 
     \renewcommand{\chapternamenum}{} 
     \renewcommand{\chapnumfont}{\chaptitlefont} 
@@ -290,8 +288,8 @@
     \postdate{\end{flushleft}}
     
     %% 'abstract' bigger skip from title
-    \addto\captionsamerican{\renewcommand*{\abstractname}{}}
-    \renewcommand{\abstractnamefont}{\normalfont\scriptsize}
+    \addto\captionsamerican{\renewcommand*\abstractname{Summary}}
+    \renewcommand{\abstractnamefont}{\normalfont\sffamily\bfseries\scriptsize}
     \renewcommand{\abstracttextfont}{\normalfont\scriptsize}
     \abstractrunin
 
@@ -307,7 +305,7 @@
    \makechapterstyle{membook}{
     \setsecheadstyle{\Large\scshape\MakeLowercase} 
     \setsubsecheadstyle{\normalsize\itshape} 
-	\setaftersubsubsecskip{-1em}
+    \setaftersubsubsecskip{-1em}
     \setsubsubsecheadstyle{\small\bfseries}
     \renewcommand{\printchaptername}{} 
     \renewcommand{\chapternamenum}{} 
